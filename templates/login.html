@@ -1,0 +1,15 @@
+{%extends 'template.html'%}
+{%block conteudo%}
+    {%if method=='get'%}
+        <p>Bem vindo, cadastre-se</p>
+    {%endif%}
+    {%if method=='post'%}
+        <p>Que bom ver você denovo</p>
+    {%endif%}
+    <form action="{{url_for('login')}}" method="post">
+        <label for="idemail">Email: <input type="text" name="email" id="idemail"></label><br>
+        <label for="idtext">Nome de usuario: <input type="text" name="text" id="idtext"></label><br>
+        <label for="idpassword">Senha: <input type="password" name="password" id="idpassword"></label>
+        <input type="submit" value="enviar">
+    </form>
+{%endblock%}
